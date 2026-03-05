@@ -1,43 +1,34 @@
 <template>
-  <v-card @click="handleClick">
+  <v-card class="ma-auto pa-auto">
     <v-img :src="src" />
+    <v-card-title> {{ props.title }}
+    </v-card-title>
     <v-card-text>
-      {{ props.text }}
+      {{ props.description }}
     </v-card-text>
+    <v-card-subtitle>
+      Autor: {{ props.author }}
+    </v-card-subtitle>
   </v-card>
 </template>
 
 <script lang="ts" setup>
-  import { ref } from 'vue'
   const props = defineProps({
     src: {
       type: String,
       required: true,
     },
-    text: {
+    title: {
       type: String,
       required: true,
     },
-    blur: {
-      type: Boolean,
+    description: {
+      type: String,
+      required: true,
+    },
+    author: {
+      type: String,
       required: true,
     },
   })
-
-  // helper to generate a picsum URL with/without blur
-  function makeUrl (blur: boolean) {
-    const base = 'https://picsum.photos/600/600/'
-    // note the proper separator between blur and random
-    return blur
-      ? `${base}?blur&random=${Math.floor(Math.random() * 1000)}`
-      : `${base}?random=${Math.floor(Math.random() * 1000)}`
-  }
-
-  const src = ref(props.src)
-
-  function handleClick () {
-    // pass the raw boolean prop, not the ref object
-    src.value = makeUrl(props.blur)
-    console.log('Image changed to:', src.value)
-  }
 </script>
