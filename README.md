@@ -8,7 +8,8 @@ UX Fluida: Implementación de v-skeleton-loader para evitar saltos de interfaz m
 
 Estado de Carga: Botón interactivo con estado :loading y deshabilitado preventivo durante peticiones asíncronas.
 
-Diseño Responsivo: Grid system de Vuetify para una visualización perfecta en cualquier dispositivo.
+Diseño Responsivo: Grid system de Vuetify para una visualización perfecta en cualquier dispositivo.<img width="1835" height="892" alt="Screenshot from 2026-03-05 10-14-04" src="https://github.com/user-attachments/assets/87e1cd69-fb5e-45d4-ae10-374a61c5e20a" />
+
 
 Componentización: Estructura limpia basada en componentes reutilizables (CardComp, TableComp).
 
